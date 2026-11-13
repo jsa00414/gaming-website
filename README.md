@@ -16,6 +16,15 @@ npm run build
 npm run preview
 ```
 
+## Production server
+
+```bash
+npm run build
+npm start
+```
+
+Serves `dist/` on `http://127.0.0.1:3000` (`HOST` / `PORT` env vars supported).
+
 ## Controls
 
 - Click arena to lock pointer
