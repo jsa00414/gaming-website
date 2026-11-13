@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASHLINE — Arena FPS</title>
+    <meta
+      name="description"
+      content="ASHLINE is a fast arena first-person shooter. Drop into dust-lit corridors, land precision shots, and own the extract."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="site-header">
+        <a class="logo" href="#top" aria-label="ASHLINE home">ASHLINE</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#modes">Modes</a>
+          <a href="#arsenal">Arsenal</a>
+          <a href="#play" class="nav-cta">Play Now</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-label="Hero">
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-grid"></div>
+            <div class="hero-glow"></div>
+            <div class="hero-corridor">
+              <div class="corridor-left"></div>
+              <div class="corridor-right"></div>
+              <div class="corridor-floor"></div>
+              <div class="corridor-target"></div>
+              <div class="muzzle"></div>
+            </div>
+            <div class="crosshair"></div>
+          </div>
+          <div class="hero-copy">
+            <p class="brand">ASHLINE</p>
+            <h1>Extract under fire.</h1>
+            <p class="lede">
+              A blistering arena shooter where every corridor is a kill lane and
+              every second is a reload.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#play">Enter Arena</a>
+              <a class="btn btn-ghost" href="#modes">View Modes</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="modes" class="section modes">
+          <div class="section-head">
+            <h2>Fight on your terms</h2>
+            <p>Three ways to burn through the ash.</p>
+          </div>
+          <ul class="mode-list">
+            <li>
+              <span class="mode-tag">01</span>
+              <h3>Deathmatch</h3>
+              <p>Free-for-all chaos. Highest eliminations before the siren.</p>
+            </li>
+            <li>
+              <span class="mode-tag">02</span>
+              <h3>Team Rush</h3>
+              <p>Two squads, one extract. Push lanes and hold the choke.</p>
+            </li>
+            <li>
+              <span class="mode-tag">03</span>
+              <h3>Ghost Protocol</h3>
+              <p>Low ammo, high stakes. One life. Silence the compound.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="arsenal" class="section arsenal">
+          <div class="section-head">
+            <h2>Arsenal</h2>
+            <p>Loadouts tuned for close-quarters velocity.</p>
+          </div>
+          <div class="arsenal-track" role="list">
+            <article class="weapon" role="listitem">
+              <h3>R-19 Pulse</h3>
+              <p>Assault rifle · Mid-range control</p>
+              <div class="stat"><span>Fire rate</span><b>720 RPM</b></div>
+            </article>
+            <article class="weapon" role="listitem">
+              <h3>Shard-12</h3>
+              <p>Shotgun · Doorway denial</p>
+              <div class="stat"><span>Spread</span><b>Tight cone</b></div>
+            </article>
+            <article class="weapon" role="listitem">
+              <h3>Needle SMG</h3>
+              <p>Submachine · Sprint &amp; spray</p>
+              <div class="stat"><span>Mobility</span><b>+18%</b></div>
+            </article>
+          </div>
+        </section>
+
+        <section id="play" class="section play-section">
+          <div class="section-head">
+            <h2>Live arena</h2>
+            <p>Click to lock aim. WASD move. Mouse look. Left click fire.</p>
+          </div>
+          <div class="game-shell">
+            <div id="game-root" class="game-root">
+              <canvas id="game-canvas"></canvas>
+              <div id="hud" class="hud" hidden>
+                <div class="hud-top">
+                  <span id="score">Kills 0</span>
+                  <span id="timer">01:30</span>
+                  <span id="ammo">30 / 90</span>
+                </div>
+                <div class="hud-cross" aria-hidden="true"></div>
+                <div class="hud-bottom">
+                  <div class="hp-bar"><div id="hp-fill"></div></div>
+                  <span id="hp-text">100 HP</span>
+                </div>
+              </div>
+              <div id="overlay" class="overlay">
+                <p class="overlay-brand">ASHLINE</p>
+                <h2 id="overlay-title">Ready up</h2>
+                <p id="overlay-copy">Click the arena to start. Survive ninety seconds.</p>
+                <button id="start-btn" class="btn btn-primary" type="button">
+                  Drop In
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p><span>ASHLINE</span> · Arena FPS demo · Built for the browser</p>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
